@@ -61,7 +61,7 @@
             <!-- <HINT> If user is authenticated, show course exam with a list of question -->
                 <div id="exam" class="collapse">
                     Click to show exam
-                    <form id="questionform" action="{% url 'submit' course.id %}" method="post">
+                    <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                                 {% for question in course.question_set.all %}
                                     <div class="card mt-1">
                                         <div class="card-header"><h5>{{ question.content}}</h5></div>
